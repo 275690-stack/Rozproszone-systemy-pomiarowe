@@ -1,3 +1,13 @@
+# Rozproszony system pomiarowy
+## 1. Informacje ogólne
+Rozproszony system pomiarowy służy do pomiaru temperatury w czasie rzeczywistym, wizualizacji i zapisu uzyskanych wyników. 
+## 2. Setup
+Wymagane oprogramowanie:
+* WSL2
+* 
+*
+## 3. Zarządzanie
+
 ### Topiciem używanym w projekcie będzie:
 
 lab/g01/esp32-%04X%08X/pomiar
