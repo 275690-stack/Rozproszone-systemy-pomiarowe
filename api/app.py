@@ -21,7 +21,7 @@ def get_measurements():
         SELECT id, group_id, device_id, sensor, value, unit, ts_ms, seq, topic
         FROM measurements
         ORDER BY id DESC
-        LIMIT 20
+        LIMIT 100
     """)
     rows = cur.fetchall()
     cur.close()
