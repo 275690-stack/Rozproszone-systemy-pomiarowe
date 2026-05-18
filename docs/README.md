@@ -4,8 +4,24 @@ Rozproszony system pomiarowy służy do pomiaru temperatury w czasie rzeczywisty
 ## 2. Setup
 Wymagane oprogramowanie:
 * WSL2
-* 
-*
+* Docker
+* Docker Compose
+* Visual Studio Code z rozszerzeniem PlatformIO
+
+Aby sklonować to repozytorium należy zastosować komendę
+```bash
+git clone https://github.com/275690-stack/Rozproszone-systemy-pomiarowe.git
+cd Rozproszone-systemy-pomiarowe
+```
+Przed uruchomieniem kodu należy upewnić się, że środowisko Docker Compose jest uruchomione za pomocą komendy:
+```bash
+docker compose up --build
+```
+Po uruchomieniu Docker Compose powinny być dostępne usługi:
+* REST API (Flask), czyli warstwa dostępu do danych pomiarowych - http://localhost:5001
+* Broker MQTT, czyli centralny punkt komunikacji - localhost:1883
+* PostgreSQL, czyli baza danych przechowująca pomiary, indeksy czasowe i dane urządzeń - localhost:5432
+* Ingestor, czyli serwis zbierający dane z MQTT i obsługujący błędy
 ## 3. Zarządzanie
 
 ### Topiciem używanym w projekcie będzie:
